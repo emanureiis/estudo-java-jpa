@@ -3,4 +3,12 @@
   <groupId>br.com.emanureiis.jpa</groupId>
   <artifactId>projeto-jpa</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+	<dependency>
+		<groupId>org.hibernate.orm</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>6.1.6.Final</version>
+	</dependency>
+  </dependencies>
 </project>
