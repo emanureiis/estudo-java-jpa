@@ -1,20 +1,2 @@
 INDEX VERSION 1.131+C:\Users\Emanuel Reis\Desktop\Programação\Eclipse\Alura\Java e JPA\.metadata\.plugins\org.eclipse.jdt.core
-2515333243.index
-1856275042.index
-280580751.index
-3883478879.index
-941793228.index
-3819194090.index
 1865797976.index
-1979412304.index
-2221507375.index
-649013715.index
-1336774167.index
-211052091.index
-1429049032.index
-832048058.index
-3691444630.index
-572394561.index
-4249484350.index
-1681762306.index
-1282984847.index
