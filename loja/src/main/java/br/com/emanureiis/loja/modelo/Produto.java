@@ -8,16 +8,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity // Indica para a JPA que esta classe é uma entidade
-@Table(name = "produtos") // "JPA, embora o nome da emtidade ser Produto, o nome da tabela no BD produtos".
+@Entity //Indica para a JPA que esta classe é uma entidade
+@Table(name = "produtos") //"JPA, embora o nome da emtidade ser Produto, o nome da tabela no BD produtos".
 public class Produto {
 
 	@Id // Indica que abaixo temos uma chave primária
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // "JPA, quem vai gerar o identificador não é a aplicação e sim
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //"JPA, quem vai gerar o identificador não é a aplicação e sim
+	//@Column (name ="desc"): indica que o atributo abaixo refere-se à coluna de nome diferente (entre parênteses)
 	private Long id;
 	private String nome;
-	// @Column (name ="desc"): indica que o atributo abaixo refere-se à coluna de
-	// nome diferente (entre parênteses)
 	private String descricao;
 	private BigDecimal preco;
 
