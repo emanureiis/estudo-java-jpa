@@ -6,7 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import br.com.emanureiis.loja.dao.ProdutoDao;
 import br.com.emanureiis.loja.modelo.Produto;
+import br.com.emanureiis.loja.util.JPAUtil;
 
 public class CadastrarProduto {
 	public static void main(String[] args) {
@@ -15,24 +17,12 @@ public class CadastrarProduto {
 		celular.setNome("Xiomi");
 		celular.setDescricao("Blá blá blá");
 		celular.setPreco(new BigDecimal("800"));
+
+		EntityManager manager = JPAUtil.getEntityManager();
+		ProdutoDao dao = new ProdutoDao(manager);
 		
-		/**
-		 * Para realizar a persistência do objeto são necessários os seguintes passos:
-		 * 
-		 *  1. Instanciar uma Factory de EntityManager;
-		 *  2. Instanciar um EntityManeger a partir da Factory;
-		 *  4. Realizar aa persistência
-		 */
-		
-		// Instanciando a fábrica e logo após criando o gerenciador
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("loja");//O parâmetro deve ser o mesmo name do persistence-unit para que a aplicação consiga se conectar com o banco de dados;
-		EntityManager manager = factory.createEntityManager();
-		
-		// Open a transaction
 		manager.getTransaction().begin();
-		// Insert the object
-		manager.persist(celular);
-		// Close and commit the transaction
+		dao.cadastrar(celular);
 		manager.getTransaction().commit();
 		manager.close();
 	}
